@@ -3,6 +3,7 @@
         <wb-resource deploy-path="/" source-path="/apps/hello01/common"/>
         <wb-resource deploy-path="/" source-path="/apps/hello01/iphone"/>
         <wb-resource deploy-path="/" source-path="/apps/hello002/common"/>
+        <wb-resource deploy-path="/" source-path="/apps/hello02/iphone"/>
         <property name="context-root" value="hello_mfp"/>
     </wb-module>
 </project-modules>
