@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project name="hello_mfp" default="all">
+    <taskdef resource="com/worklight/ant/defaults.properties">
+        <classpath>
+			<pathelement location="/Applications/IBM/MobileFirst-CLI/mobilefirst-cli/node_modules/generator-worklight-server/ant-tools/worklight-ant-builder.jar"/> 
+		</classpath>
+    </taskdef>
+    
+    <target name="all" depends="hello01">
+		<war-builder projectfolder="."
+			destinationfolder="bin/war"
+			warfile="bin/hello_mfp.war" 
+			classesFolder="classes-folder"/>
+    </target>
+    
+    
+	<target name="hello01">
+		<app-builder worklightserverhost="http://192.168.1.104:10080" 
+			applicationFolder="apps/hello01" 
+			nativeProjectPrefix="hellomfp" 
+			outputFolder="bin"/>
+  	</target>
+</project>
