@@ -84,6 +84,6 @@ function getPath(interest) {
 
 function hello() {
     return {
-	            result: "Hello @ " + new Date().toString()
+	            result: "Hello03 @ " + new Date().toString()
 			        };
 }

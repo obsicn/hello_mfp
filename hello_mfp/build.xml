@@ -6,7 +6,7 @@
 		</classpath>
     </taskdef>
     
-    <target name="all" depends="hello01">
+    <target name="all" depends="hello01, hello02, HelloWorld">
 		<war-builder projectfolder="."
 			destinationfolder="bin/war"
 			warfile="bin/hello_mfp.war" 
@@ -20,4 +20,17 @@
 			nativeProjectPrefix="hellomfp" 
 			outputFolder="bin"/>
   	</target>
+	
+	<target name="hello02">
+		<app-builder worklightserverhost="http://192.168.1.104:10080" 
+			applicationFolder="apps/hello02" 
+			nativeProjectPrefix="hellomfp" 
+			outputFolder="bin"/>
+  	</target>
+	
+	<target name="HelloWorld"> 
+		<adapter-builder
+			folder="adapters/HelloWorld"
+			destinationfolder="bin"/>
+	</target>	
 </project>
